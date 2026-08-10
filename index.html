@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Management System</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+<nav>
+    <h2>
+        <i class="fa-solid fa-graduation-cap"></i>
+        Student Management
+    </h2>
+
+    <div class="menu">
+        <a href="#"><i class="fa-solid fa-house"></i> Home</a>
+        <a href="#form"><i class="fa-solid fa-user-plus"></i> Add Student</a>
+        <a href="#students"><i class="fa-solid fa-users"></i> Students</a>
+    </div>
+</nav>
+
+<div class="container">
+
+    <!-- Student Form -->
+    <div class="form-box" id="form">
+
+        <h2>
+            <i class="fa-solid fa-user-plus"></i>
+            Student Form
+        </h2>
+
+        <input type="hidden" id="editIndex">
+
+        <input type="text" id="rollNo" placeholder="Roll No">
+        <input type="text" id="name" placeholder="Student Name">
+        <input type="text" id="fatherName" placeholder="Father Name">
+        <input type="email" id="email" placeholder="Email">
+        <input type="text" id="department" placeholder="Department">
+        <input type="number" id="cgpa" placeholder="CGPA"
+               step="0.01" min="0" max="4">
+
+        <button onclick="saveStudent()">
+            <i class="fa-solid fa-floppy-disk"></i>
+            Save Student
+        </button>
+
+    </div>
+
+
+    <!-- Student Records -->
+    <div class="table-box" id="students">
+
+        <h2>
+            <i class="fa-solid fa-users"></i>
+            Student Records
+        </h2>
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Roll No</th>
+                    <th>Name</th>
+                    <th>Father Name</th>
+                    <th>Email</th>
+                    <th>Department</th>
+                    <th>CGPA</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+
+            <tbody id="studentList"></tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
